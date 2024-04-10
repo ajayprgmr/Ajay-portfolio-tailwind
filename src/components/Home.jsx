@@ -7,11 +7,10 @@ const Home = () => {
     <div className='min-h-screen flex flex-col'>
       {/* Hero Image */}
       <div className='flex-grow'>
-        <img src={hero} alt='hero' className='w-full h-full object-cover' />
+        <img src={hero} alt='hero' className='w-full h-full object-contain' />
       </div>
-``
       {/* Content */}
-      <div className='bg-blue-100 py-8 flex flex-col justify-center items-center'>
+      <div className='bg-blue-100 py-8 flex flex-col justify-between items-center'>
         <div className='flex flex-col items-center space-y-2'>
           <h1 className='text-5xl font-extrabold tracking-wider'>I'm Ajay</h1>
           <h6 className='text-2xl tracking-wider'>Front-End Developer</h6>
