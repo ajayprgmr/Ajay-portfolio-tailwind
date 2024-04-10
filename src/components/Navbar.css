@@ -1,0 +1,13 @@
+#nav-links {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out; /* Adjust the duration as needed */
+}
+
+#nav-links.show {
+  max-height: 500px; /* Adjust the maximum height as needed */
+}
+
+.homepage-container {
+  height: 50vh;
+}
