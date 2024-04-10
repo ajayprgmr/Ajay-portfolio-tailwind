@@ -10,7 +10,7 @@ const Home = () => {
         <img src={hero} alt='hero' />
       </div>
       {/* Content */}
-      <div className='bg-blue-100  flex flex-col justify-between items-center'>
+      <div className='bg-blue-100  flex flex-col justify-start items-center '>
         <div className='flex flex-col items-center space-y-2'>
           <h1 className='text-5xl font-extrabold tracking-wider'>I'm Ajay</h1>
           <h6 className='text-2xl tracking-wider'>Front-End Developer</h6>
@@ -18,7 +18,7 @@ const Home = () => {
             Turning Ideas Into Interactive Reality
           </p>
         </div>
-        <div className='flex justify-center space-x-4 pb-10'>
+        <div className='flex justify-center space-x-4 py-20'>
           {socials.map((social) => {
             const { id, url, icon } = social
             return (
