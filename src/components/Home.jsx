@@ -7,16 +7,16 @@ const Home = () => {
   return (
     <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen'>
       {/* Hero Image */}
-      <div className='object-cover md:border-4 md:border-green-500 md:mt-20'>
+      <div className='object-cover  md:mt-20'>
         <img
           src={hero}
           alt='hero'
-          className='h-mobile-img  w-screen object-fit md:h-full  object-cover  '
+          className='h-mobile-img object-fit w-screen object-fit md:h-full'
         />
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between md:min-h-screen md:mt-20 md:justify-center md:border-4 md:border-red-500   '>
+      <div className='flex flex-col justify-between md:min-h-screen md:mt-20 md:justify-center    '>
         <div className='flex flex-col items-center space-y-4 md:pt-20 md:space-y-6'>
           <h1 className='text-7xl font-extrabold tracking-wider md:text-8xl md:font-semibold'>
             I'm Ajay
@@ -27,7 +27,7 @@ const Home = () => {
           {/* <p className='text-xl'>Turning Ideas Into Interactive Reality</p> */}
           <div
             id='typewriter'
-            className='text-blue-500 text-xl font-semibold md:text-2xl pb-20'
+            className='text-blue-500 text-xl font-semibold md:text-2xl pb-20 md:tracking-widest'
           >
             <Typewriter
               options={{
