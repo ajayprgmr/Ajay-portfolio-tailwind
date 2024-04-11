@@ -1,13 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       height: {
-        'mobile-img': '360px', // Change 'mobile_img_w' to 'width' and '50' to 'mobile-img'
+        'mobile-img': '360px',
       },
       backgroundColor: {
-        'custom': '#CDE6FA',
+        custom: '#CDE6FA',
+      },
+      transitionProperty: {
+        custom: 'opacity, transform', // Define custom transition properties
+      },
+      transitionDuration: {
+        custom: '0.7s', // Define custom transition duration
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(15px)',
+          },
+          '50%': {
+            transform: 'translateY(-40px)', // Adjust the distance for the bounce effect
+          },
+        },
+      },
+      animation: {
+        bounce: 'bounce 2s infinite ease-in-out', // Adjust the cubic-bezier values as needed
       },
     },
   },

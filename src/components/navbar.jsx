@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
-
+import title from '../assets/title.svg'
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
 
@@ -11,12 +11,11 @@ const Navbar = () => {
 
   console.log(showLinks)
   return (
-    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full'>
+    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full '>
       <div className=' flex justify-between items-center p-3'>
-        {/* Title */}
-        <h2 className='text-3xl tracking-wider pb-2'>
+        <h2 className='text-3xl tracking-wider pb-2 font-semibold '>
           <span className='font-semibold'>ajay</span>
-          <span className='text-blue-500 font-semibold'>_prgmr</span>
+          <span className='text-blue-500 '>_prgmr</span>
         </h2>
         {/* Hamburger menu */}
         <button className='md:hidden' onClick={toggleLinks}>
@@ -31,8 +30,8 @@ const Navbar = () => {
       {/* Navigation links */}
       <div
         className={`md:flex md:justify-center md:items-center ${
-          showLinks ? 'h-full' : 'h-0'
-        }   pb-2`}
+          showLinks ? 'transition-custom' : 'h-0'
+        } transition-custom  pb-2`}
       >
         <ul
           className={`${

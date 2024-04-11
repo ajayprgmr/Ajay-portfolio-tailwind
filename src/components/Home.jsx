@@ -1,28 +1,34 @@
 import hero from '../assets/hero.jpeg'
 import { socials } from '../data'
 import Typewriter from 'typewriter-effect'
+import { FaChevronDown } from 'react-icons/fa'
 
 const Home = () => {
   return (
-    <div className='min-h-screen grid grid-rows-2 bg-custom '>
+    <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen'>
       {/* Hero Image */}
-      <div className='object-contain'>
+      <div className='object-cover md:border-4 md:border-green-500 md:mt-20'>
         <img
           src={hero}
           alt='hero'
-          className='h-mobile-img w-screen object-fit'
+          className='h-mobile-img  w-screen object-fit md:h-full  object-cover  '
         />
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between'>
-        <div className='flex flex-col items-center space-y-4'>
-          <h1 className='text-7xl font-extrabold tracking-wider'>I'm Ajay</h1>
-          <h6 className='text-3xl tracking-wider font-semibold'>
+      <div className='flex flex-col justify-between md:min-h-screen md:mt-20 md:justify-center md:border-4 md:border-red-500   '>
+        <div className='flex flex-col items-center space-y-4 md:pt-20 md:space-y-6'>
+          <h1 className='text-7xl font-extrabold tracking-wider md:text-8xl md:font-semibold'>
+            I'm Ajay
+          </h1>
+          <h6 className='text-3xl tracking-wider font-semibold md:text-4xl '>
             Front-End Developer
           </h6>
           {/* <p className='text-xl'>Turning Ideas Into Interactive Reality</p> */}
-          <div id='typewriter' className='text-blue-500 text-xl font-semibold'>
+          <div
+            id='typewriter'
+            className='text-blue-500 text-xl font-semibold md:text-2xl pb-20'
+          >
             <Typewriter
               options={{
                 strings: [
@@ -41,8 +47,13 @@ const Home = () => {
             />
           </div>
         </div>
-
-        <div className='flex justify-center gap-4 pb-5  '>
+        <div className='invisible md:visible md:flex md:flex-col gap-2 md:items-center'>
+          <FaChevronDown className='text-5xl transiton animate-bounce duration-custom ' />
+          <h2 className='text-2xl p-4 bg-blue-400 rounded-full text-black font-semibold hover:cursor-pointer'>
+            Know More
+          </h2>
+        </div>
+        <div className='flex justify-center gap-4 pb-5 md:invisible md:h-0 m'>
           {socials.map((social) => {
             const { id, url, icon } = social
             return (
