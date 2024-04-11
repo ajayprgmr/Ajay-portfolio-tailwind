@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
-import './Navbar.css'
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
@@ -12,19 +11,19 @@ const Navbar = () => {
 
   console.log(showLinks)
   return (
-    <nav className=' shadow-lg md:flex justify-around items-center bg-blue-100 fixed block w-full'>
+    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full'>
       <div className=' flex justify-between items-center p-3'>
         {/* Title */}
         <h2 className='text-3xl tracking-wider pb-2'>
           <span className='font-semibold'>ajay</span>
-          <span className='text-blue-400'>_prgmr</span>
+          <span className='text-blue-500 font-semibold'>_prgmr</span>
         </h2>
         {/* Hamburger menu */}
         <button className='md:hidden' onClick={toggleLinks}>
           {showLinks ? (
-            <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-blue-400 bg-transparent ' />
+            <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-blue-500 bg-transparent ' />
           ) : (
-            <FaBars className='text-4xl  text-blue-400  bg-transparent' />
+            <FaBars className='text-4xl text-blue-500  bg-transparent' />
           )}
         </button>
       </div>
@@ -48,7 +47,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='capitalize block hover:bg-blue-200 pl-5 text-xl md:hover:bg-transparent md:hover:text-blue-400'
+                  className='capitalize block hover:bg-blue-400 hover:pl-7 pl-5 text-xl md:hover:bg-transparent md:hover:text-blue-400'
                 >
                   {text}
                 </a>
@@ -75,7 +74,9 @@ const Navbar = () => {
                   ? 'hover:text-blue-600'
                   : id === 4
                   ? 'hover:text-fuchsia-700'
-                  : 'text-blue-400'
+                  : id == 5
+                  ? 'hover:text-black'
+                  : 'text-blue-200'
               }
 '
               }`}

@@ -5,6 +5,7 @@ import {
   FaFacebook,
   FaLinkedin,
   FaTwitter,
+  FaGithubSquare,
 } from 'react-icons/fa'
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -33,6 +34,11 @@ export const socials = [
     id: 4,
     url: 'https://www.instagram.com',
     icon: <FaInstagramSquare />,
+  },
+  {
+    id: 5,
+    url: 'https://www.instagram.com',
+    icon: <FaGithubSquare />,
   },
 ]
 
