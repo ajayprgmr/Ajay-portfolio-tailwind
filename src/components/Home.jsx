@@ -5,9 +5,9 @@ import { FaChevronDown } from 'react-icons/fa'
 
 const Home = () => {
   return (
-    <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen'>
+    <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen fit'>
       {/* Hero Image */}
-      <div className='object-cover  md:mt-20'>
+      <div className='object-fit  md:mt-20'>
         <img
           src={hero}
           alt='hero'
@@ -16,7 +16,7 @@ const Home = () => {
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between md:min-h-screen md:mt-20 md:justify-center    '>
+      <div className='flex flex-col   md:min-h-screen md:mt-20 md:justify-center    '>
         <div className='flex flex-col items-center space-y-4 md:pt-20 md:space-y-6'>
           <h1 className='text-7xl font-extrabold tracking-wider md:text-8xl md:font-semibold'>
             I'm Ajay
@@ -27,7 +27,7 @@ const Home = () => {
           {/* <p className='text-xl'>Turning Ideas Into Interactive Reality</p> */}
           <div
             id='typewriter'
-            className='text-blue-500 text-xl font-semibold md:text-2xl pb-20 md:tracking-widest'
+            className='text-blue-500 text-xl font-semibold md:text-2xl md:pb-20 md:tracking-widest'
           >
             <Typewriter
               options={{
