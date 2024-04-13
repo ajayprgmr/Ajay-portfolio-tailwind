@@ -12,12 +12,13 @@ export const links = [
   { id: nanoid(), href: '#skills', text: 'skills' },
   { id: nanoid(), href: '#about', text: 'about' },
   { id: nanoid(), href: '#projects', text: 'projects' },
+  { id: nanoid(), href: '#projects', text: 'contact' },
 ]
 
 export const socials = [
   {
     id: 1,
-    url: 'https://www.facebook.com',
+    url: 'https://www.facebook.com/profile.php?id=100005873025208',
     icon: <FaFacebook />,
   },
   {
@@ -27,17 +28,17 @@ export const socials = [
   },
   {
     id: 3,
-    url: 'https://www.linkedin.com',
+    url: 'https://www.linkedin.com/in/ajay-kushwaha-4ab438214/',
     icon: <FaLinkedin />,
   },
   {
     id: 4,
-    url: 'https://www.instagram.com',
+    url: 'https://www.instagram.com/ajay_prgmr/',
     icon: <FaInstagramSquare />,
   },
   {
     id: 5,
-    url: 'https://www.instagram.com',
+    url: 'https://github.com/ajayprgmr',
     icon: <FaGithubSquare />,
   },
 ]

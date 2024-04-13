@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen fit'>
       {/* Hero Image */}
-      <div className='object-fit  md:mt-20'>
+      <div className='md:object-contain mt-10 '>
         <img
           src={hero}
           alt='hero'
@@ -16,7 +16,7 @@ const Home = () => {
       </div>
 
       {/* Content */}
-      <div className='flex flex-col   md:min-h-screen md:mt-20 md:justify-center    '>
+      <div className='flex flex-col justify-between items-center md:min-h-screen md:mt-20 md:justify-between    '>
         <div className='flex flex-col items-center space-y-4 md:pt-20 md:space-y-6'>
           <h1 className='text-7xl font-extrabold tracking-wider md:text-8xl md:font-semibold'>
             I'm Ajay
@@ -47,11 +47,17 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className='invisible md:visible md:flex md:flex-col gap-2 md:items-center'>
-          <FaChevronDown className='text-5xl transiton animate-bounce duration-custom ' />
-          <h2 className='text-2xl p-4 bg-blue-400 rounded-full text-black font-semibold hover:cursor-pointer'>
-            Know More
+
+        <div className=' invisible md:visible md:-mt-40    md:flex md:flex-col gap-1 md:items-center'>
+          <FaChevronDown className='text-5xl transiton animate-bounce duration-custom  ' />
+          <h2 className='text-xl p-3 bg-blue-400 rounded-full text-black font-semibold hover:cursor-pointer hover:bg-blue-600   '>
+            <a href='#about'>Know More</a>
           </h2>
+        </div>
+        <div className='min-w-full flex justify-center pb-4 md:justify-end items-center md:pr-4'>
+          <button className='text-xl text-black italic  p-2  bg-blue-400 rounded-full hover:bg-blue-600'>
+            Download Resume
+          </button>
         </div>
         <div className='flex justify-center gap-4 pb-5 md:invisible md:h-0 m'>
           {socials.map((social) => {

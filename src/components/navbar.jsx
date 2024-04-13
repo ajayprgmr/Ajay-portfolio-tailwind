@@ -11,18 +11,18 @@ const Navbar = () => {
 
   console.log(showLinks)
   return (
-    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full '>
+    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full bg-blue-300'>
       <div className=' flex justify-between items-center p-3'>
         <h2 className='text-3xl tracking-wider pb-2 font-semibold '>
           <span className='font-semibold'>ajay</span>
-          <span className='text-blue-500 '>_prgmr</span>
+          <span className='text-blue-600 '>_prgmr</span>
         </h2>
         {/* Hamburger menu */}
         <button className='md:hidden' onClick={toggleLinks}>
           {showLinks ? (
-            <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-blue-500 bg-transparent ' />
+            <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent ' />
           ) : (
-            <FaBars className='text-4xl text-blue-500  bg-transparent' />
+            <FaBars className='text-4xl text-black  bg-transparent' />
           )}
         </button>
       </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='capitalize block hover:bg-blue-400 hover:pl-7 pl-5 text-xl md:hover:bg-transparent md:hover:text-blue-400'
+                  className='capitalize text-black block hover:bg-blue-600 hover:pl-7 pl-5 hover:font-semibold text-xl md:hover:bg-transparent md:hover:text-blue-600 '
                 >
                   {text}
                 </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {/* Social icons */}
-      <div className='invisible h-0 md:visible md:flex md:justify-center md:items-center md:gap-4'>
+      <div className='invisible  h-0 md:visible md:flex md:justify-center md:items-center md:gap-4'>
         {socials.map((social) => {
           const { id, url, icon } = social
           return (
@@ -78,7 +78,7 @@ const Navbar = () => {
                   : 'text-blue-200'
               }
 '
-              }`}
+              } md:md:text-black`}
             >
               {icon}
             </a>
