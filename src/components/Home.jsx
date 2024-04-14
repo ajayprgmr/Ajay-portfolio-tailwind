@@ -5,29 +5,29 @@ import { FaChevronDown } from 'react-icons/fa'
 
 const Home = () => {
   return (
-    <div className='min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-cols-2 md:min-h-screen fit'>
+    <div className=' min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-rows-3 lg:max-h-screen lg:grid-cols-2 border-4 '>
       {/* Hero Image */}
-      <div className='md:object-contain mt-10 '>
+      <div className='md:mt-20 md:h-tab-img lg:min-h-screen lg:-mt-1'>
         <img
           src={hero}
           alt='hero'
-          className='h-mobile-img object-fit w-screen object-fit md:h-full'
+          className='mt-20 md:-mt-10 h-mobile-img w-screen lg:h-full '
         />
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between items-center md:min-h-screen md:mt-20 md:justify-between    '>
-        <div className='flex flex-col items-center space-y-4 md:pt-20 md:space-y-6'>
-          <h1 className='text-7xl font-extrabold tracking-wider md:text-8xl md:font-semibold'>
+      <div className='flex flex-col justify-between items-center md:flex md:flex-col md:justify-between md:min-h-full lg:max-h-screen lg:flex lg:flex-col lg:justify-between lg:mt-96'>
+        <div className='flex flex-col items-center space-y-6 md:-mt-40 lg:flex lg:justify-start lg:items-center'>
+          <h1 className='text-5xl md:text-5xl font-extrabold tracking-wider lg:text-8xl lg:font-semibold'>
             I'm Ajay
           </h1>
-          <h6 className='text-3xl tracking-wider font-semibold md:text-4xl '>
+          <h6 className='text-3xl tracking-wider font-semibold lg:text-4xl '>
             Front-End Developer
           </h6>
           {/* <p className='text-xl'>Turning Ideas Into Interactive Reality</p> */}
           <div
             id='typewriter'
-            className='text-blue-500 text-xl font-semibold md:text-2xl md:pb-20 md:tracking-widest'
+            className='text-blue-500 text-xl font-semibold md:text-3xl lg:text-2xl  lg:tracking-widest'
           >
             <Typewriter
               options={{
@@ -48,18 +48,19 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=' invisible md:visible md:-mt-40    md:flex md:flex-col gap-1 md:items-center'>
-          <FaChevronDown className='text-5xl transiton animate-bounce duration-custom  ' />
-          <h2 className='text-xl p-3 bg-blue-400 rounded-full text-black font-semibold hover:cursor-pointer hover:bg-blue-600   '>
+        <div className='invisible md:visible md:mt-44 md:flex md:flex-col md:items-center  lg:flex lg:flex-col gap-1 lg:items-center '>
+          <FaChevronDown className='text-5xl animate-bounce duration-custom md:-mt-20' />
+          <h2 className='text-xl p-3 bg-blue-400 rounded-full text-black font-semibold hover:cursor-pointer hover:bg-blue-600'>
             <a href='#about'>Know More</a>
           </h2>
         </div>
-        <div className='min-w-full flex justify-center pb-4 md:justify-end items-center md:pr-4'>
-          <button className='text-xl text-black italic  p-2  bg-blue-400 rounded-full hover:bg-blue-600'>
+
+        <div className='min-w-full -mt-40  flex justify-center  md:flex md:justify-end md:pr-10 md:mt-1 lg:justify-end items-center lg:pr-10 lg:mt-40'>
+          <button className='text-2xl text-black italic p-2 font-semibold  bg-blue-400 rounded hover:bg-blue-600 '>
             Download Resume
           </button>
         </div>
-        <div className='flex justify-center gap-4 pb-5 md:invisible md:h-0 m'>
+        <div className='flex justify-center gap-4 pb-5 md:mb-48 lg:invisible '>
           {socials.map((social) => {
             const { id, url, icon } = social
             return (
@@ -78,7 +79,7 @@ const Home = () => {
                     : id === 5
                     ? 'hover:text-black'
                     : 'text-blue-200'
-                }`}
+                } `}
               >
                 {icon}
               </a>

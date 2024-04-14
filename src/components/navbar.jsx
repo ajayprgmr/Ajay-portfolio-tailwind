@@ -1,24 +1,35 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
-import title from '../assets/title.svg'
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
+  const navHeight = useRef(null)
 
   const toggleLinks = () => {
     setShowLinks(!showLinks)
   }
+  useEffect(() => {
+    if (showLinks) {
+      navHeight.current.classList.toggle('h-60')
+      navHeight.current.classList.remove('h-20')
+    } else {
+      navHeight.current.classList.toggle('h-20')
+      navHeight.current.classList.remove('h-60')
+    }
+  }, [showLinks])
 
-  console.log(showLinks)
   return (
-    <nav className=' shadow-lg md:flex justify-around items-center  fixed block w-full bg-blue-300'>
-      <div className=' flex justify-between items-center p-3'>
-        <h2 className='text-3xl tracking-wider pb-2 font-semibold '>
+    <nav
+      ref={navHeight}
+      className=' h-20 md:h-20 lg:h-20  block  shadow-lg fixed min-w-full bg-blue-300 md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '
+    >
+      <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
+        <h2 className='text-2xl md:text-3xl  lg:text-4xl  tracking-wider pb-2 font-semibold '>
           <span className='font-semibold'>ajay</span>
           <span className='text-blue-600 '>_prgmr</span>
         </h2>
         {/* Hamburger menu */}
-        <button className='md:hidden' onClick={toggleLinks}>
+        <button className='lg:hidden md:hidden' onClick={toggleLinks}>
           {showLinks ? (
             <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent ' />
           ) : (
@@ -28,16 +39,12 @@ const Navbar = () => {
       </div>
 
       {/* Navigation links */}
-      <div
-        className={`md:flex md:justify-center md:items-center ${
-          showLinks ? 'transition-custom' : 'h-0'
-        } transition-custom  pb-2`}
-      >
+      <div className=''>
         <ul
           className={`${
             showLinks
-              ? 'md:flex '
-              : 'invisible md:visible md:flex md:justify-center md:items-center md:gap-3'
+              ? 'lg:flex  md:flex md:pl-20'
+              : 'invisible md:visible  md:flex md:justify-end md:items-center  lg:visible lg:flex lg:justify-center lg:items-center'
           } `}
         >
           {links.map((link) => {
@@ -46,7 +53,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='capitalize text-black block hover:bg-blue-600 hover:pl-7 pl-5 hover:font-semibold text-xl md:hover:bg-transparent md:hover:text-blue-600 '
+                  className='capitalize text-black block hover:pl-7 pl-5 hover:font-semibold text-xl md:text-xl  lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 '
                 >
                   {text}
                 </a>
@@ -57,14 +64,14 @@ const Navbar = () => {
       </div>
 
       {/* Social icons */}
-      <div className='invisible  h-0 md:visible md:flex md:justify-center md:items-center md:gap-4'>
+      <div className='invisible  lg:visible lg:flex lg:justify-center lg:items-center lg:gap-4'>
         {socials.map((social) => {
           const { id, url, icon } = social
           return (
             <a
               key={id}
               href={url}
-              className={` text-blue-400 text-2xl ${
+              className={` text-blue-400 text-4xl ${
                 id === 1
                   ? 'hover:text-blue-600'
                   : id === 2
@@ -78,7 +85,7 @@ const Navbar = () => {
                   : 'text-blue-200'
               }
 '
-              } md:md:text-black`}
+              } lg:lg:text-black`}
             >
               {icon}
             </a>

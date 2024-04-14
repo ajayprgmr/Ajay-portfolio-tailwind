@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       height: {
         'mobile-img': '360px',
+        'tab-img': '500px',
       },
       backgroundColor: {
         custom: '#CDE6FA',
