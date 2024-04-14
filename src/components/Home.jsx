@@ -5,7 +5,10 @@ import { FaChevronDown } from 'react-icons/fa'
 
 const Home = () => {
   return (
-    <div className=' min-h-screen grid grid-rows-2 bg-custom md:grid md:grid-rows-3 lg:max-h-screen lg:grid-cols-2 border-4 '>
+    <div
+      className='  bg-custom min-h-screen  grid grid-rows-2 md:grid md:grid-rows-3 lg:max-h-screen lg:grid-cols-2 border-4 '
+      id='home'
+    >
       {/* Hero Image */}
       <div className='md:mt-20 md:h-tab-img lg:min-h-screen lg:-mt-1'>
         <img
@@ -55,7 +58,7 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className='min-w-full -mt-40  flex justify-center  md:flex md:justify-end md:pr-10 md:mt-1 lg:justify-end items-center lg:pr-10 lg:mt-40'>
+        <div className='min-w-full -mt-40  flex justify-center  md:flex md:justify-end md:pr-10 md:mt-1 lg:justify-end items-center lg:pr-10 '>
           <button className='text-2xl text-black italic p-2 font-semibold  bg-blue-400 rounded hover:bg-blue-600 '>
             Download Resume
           </button>
