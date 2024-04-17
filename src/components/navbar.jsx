@@ -53,7 +53,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='capitalize text-black block hover:pl-7 pl-5 hover:font-semibold text-xl md:text-xl  lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 '
+                  className='capitalize text-black block hover:pl-7 pl-5 hover:font-semibold hover:bg-blue-600 text-xl md:text-xl  lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 '
                 >
                   {text}
                 </a>

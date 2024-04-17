@@ -4,7 +4,7 @@ import SkillCard from './SkillCard'
 
 const Skills = () => {
   return (
-    <section className=' py-20 align-element ' id='skills'>
+    <section className=' pt-20 align-element min-h-full ' id='skills'>
       <SectionTitle text='tech-stack' />
       <div className='py-16 grid gap-8 md:grid-2 lg:grid-cols-3'>
         {skills.map((skill) => {
