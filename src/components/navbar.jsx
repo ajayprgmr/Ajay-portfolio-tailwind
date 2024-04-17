@@ -25,7 +25,7 @@ const Navbar = () => {
     >
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
         <h2 className='text-2xl md:text-3xl  lg:text-4xl  tracking-wider pb-2 font-semibold '>
-          <span className='font-semibold'>ajay</span>
+          <span className='font-semibold lowercase'>ajay</span>
           <span className='text-blue-600 '>_prgmr</span>
         </h2>
         {/* Hamburger menu */}

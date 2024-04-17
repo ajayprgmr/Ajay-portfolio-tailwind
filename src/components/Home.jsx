@@ -4,6 +4,17 @@ import Typewriter from 'typewriter-effect'
 import { FaChevronDown } from 'react-icons/fa'
 
 const Home = () => {
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement('a')
+    // Set the href attribute to the file URL you want to download
+    link.href =
+      'https://drive.google.com/file/d/13EQS7zoSsdIHoOTH56XyadYQYxpf3kJG/view?usp=sharing'
+    // Set the download attribute to specify the filename
+    link.download = 'filename.pdf'
+    // Trigger the click event on the link element
+    link.click()
+  }
   return (
     <div
       className='  bg-custom min-h-screen  grid grid-rows-2 md:grid md:grid-rows-3 lg:max-h-screen lg:grid-cols-2 border-4 '
@@ -59,7 +70,10 @@ const Home = () => {
         </div>
 
         <div className='min-w-full -mt-40  flex justify-center  md:flex md:justify-end md:pr-10 md:mt-1 lg:justify-end items-center lg:pr-10 '>
-          <button className='text-2xl text-black italic p-2 font-semibold  bg-blue-400 rounded hover:bg-blue-600 '>
+          <button
+            className='text-2xl text-black italic p-2 font-semibold  bg-blue-400 rounded hover:bg-blue-600 '
+            onClick={handleDownload}
+          >
             Download Resume
           </button>
         </div>
