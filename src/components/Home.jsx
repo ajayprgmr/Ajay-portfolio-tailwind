@@ -9,7 +9,7 @@ const Home = () => {
     const link = document.createElement('a')
     // Set the href attribute to the file URL you want to download
     link.href =
-      'https://drive.google.com/file/d/13EQS7zoSsdIHoOTH56XyadYQYxpf3kJG/view?usp=sharing'
+      'https://drive.google.com/drive/u/1/folders/1tvuMrBokPp29hJ9NZ11ortvjmHp3Dov4'
     // Set the download attribute to specify the filename
     link.download = 'filename.pdf'
     // Trigger the click event on the link element

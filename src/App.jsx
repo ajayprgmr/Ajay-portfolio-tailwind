@@ -7,7 +7,7 @@ import Contact from './components/contact'
 
 const App = () => {
   return (
-    <section>
+    <section className='max-w-screen'>
       <Navbar />
 
       {/* Assigning different colors to components */}
