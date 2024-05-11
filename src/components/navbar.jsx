@@ -19,12 +19,12 @@ const Navbar = () => {
 
   console.log(heightStyle)
   return (
-    <nav className='h-20  shadow-lg fixed min-w-[100vw] bg-blue-300 md:h-20 lg:h-20  md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '>
+    <nav className='h-20  shadow-lg fixed min-w-[100vw] bg-blue-300   md:flex md:flex-col md:items-start justify-between lg:gap-10  lg:grid lg:grid-cols-3 lg:items-center '>
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
         <img
           src={ajay_prgmr}
           alt='ajay_prgmr'
-          className='pb-5 ml-[-12px] w-40  md:mt-[-30px] md:w-48 lg:pt-[24px] lg:w-56  '
+          className='pb-5 ml-[-12px] w-40  md:mt-[-30px] md:w-48 lg:pt-[20px] lg:w-56   '
         />
         {/* Hamburger menu */}
         <button className='lg:hidden md:hidden' onClick={toggleLinks}>
@@ -37,13 +37,13 @@ const Navbar = () => {
       </div>
 
       {/* Navigation links */}
-      <div className={`h-${heightStyle}`} ref={navLinksContainer}>
+      <div className={`h-${heightStyle} `} ref={navLinksContainer}>
         <ul
           ref={navLinksRef}
           className={`${
             showLinks
-              ? 'lg:flex  md:flex md:pl-20 '
-              : 'invisible md:visible  md:flex md:mt-[-30px] md:pl-2 lg:visible lg:flex lg:justify-center lg:items-center'
+              ? ' md:flex  lg:flex lg:justify-center lg:items-center'
+              : 'invisible md:visible  md:flex md:mt-[-30px] md:pl-2  lg:visible lg:mt-[-1px]  lg:flex lg:justify-center lg:items-center'
           } `}
         >
           {links.map((link) => {
@@ -52,7 +52,8 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='bg-blue-300 capitalize text-black block  pl-5 hover:bg-blue-600 text-l md:text-xl md:hover:text-blue-600 md:hover:bg-transparent lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 lg:mt-5 '
+                  onClick={showLinks ? toggleLinks : undefined} // Conditionally add onClick event
+                  className={`bg-blue-300 capitalize text-black block pl-5 hover:bg-blue-600 text-l md:text-xl md:hover:text-blue-600 md:hover:bg-transparent lg:hover:text-blue-600`}
                 >
                   {text}
                 </a>

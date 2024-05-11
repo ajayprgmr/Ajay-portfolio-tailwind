@@ -37,11 +37,11 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='py-20 align-element' id='contact'>
+    <div className='pt-20 align-element' id='contact'>
       <SectionTitle text='Contact Me' />
-      <div className='mt-10 max-w-md mx-auto bg-white shadow-md rounded px-8 py-6'>
+      <div className='mt-10  bg-white shadow-md rounded px-8 py-6'>
         <form onSubmit={handleSubmit}>
-          <div className='mb-4'>
+          <div className='mb-4 '>
             <label
               className='block text-gray-700 text-sm font-bold mb-2'
               htmlFor='name'
@@ -85,9 +85,9 @@ const ContactForm = () => {
               Message
             </label>
             <textarea
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='shadow appearance-none border rounded w-full py-2 px-3 h-40 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               id='message'
-              placeholder='Your Message'
+              placeholder='Your Message....'
               name='message'
               value={formData.message}
               onChange={handleChange}
@@ -96,7 +96,7 @@ const ContactForm = () => {
           </div>
           <div className='flex items-center justify-between'>
             <button
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+              className='bg-blue-500 min-w-[100%] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
               type='submit'
             >
               Send
