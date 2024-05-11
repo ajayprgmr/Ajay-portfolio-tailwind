@@ -19,19 +19,19 @@ const Navbar = () => {
 
   console.log(heightStyle)
   return (
-    <nav className='h-20 block shadow-lg fixed min-w-full bg-blue-300 md:h-20 lg:h-20  md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '>
+    <nav className='h-20  shadow-lg fixed min-w-[100vw] bg-blue-300 md:h-20 lg:h-20  md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '>
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
         <img
           src={ajay_prgmr}
           alt='ajay_prgmr'
-          className='pb-5 ml-[-12px] md:mt-[-30px] lg:pt-[24px]  '
+          className='pb-5 ml-[-12px] w-40  md:mt-[-30px] md:w-48 lg:pt-[24px] lg:w-56  '
         />
         {/* Hamburger menu */}
         <button className='lg:hidden md:hidden' onClick={toggleLinks}>
           {showLinks ? (
-            <FaWindowClose className='text-4xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent ' />
+            <FaWindowClose className='text-2xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent mr-10 ' />
           ) : (
-            <FaBars className='text-4xl text-black  bg-transparent' />
+            <FaBars className='text-2xl text-black  bg-transparent mr-10' />
           )}
         </button>
       </div>
