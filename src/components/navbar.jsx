@@ -1,33 +1,31 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
+import ajay_prgmr from '../assets/ajay_prgmr.svg'
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
-  const navHeight = useRef(null)
+  const navLinksRef = useRef(null)
+  const navLinksContainer = useRef(null)
+  console.log(`links:${navLinksRef}`)
+  console.log(`linksContainer:${navLinksContainer}`)
 
   const toggleLinks = () => {
     setShowLinks(!showLinks)
   }
-  useEffect(() => {
-    if (showLinks) {
-      navHeight.current.classList.toggle('h-60')
-      navHeight.current.classList.remove('h-20')
-    } else {
-      navHeight.current.classList.toggle('h-20')
-      navHeight.current.classList.remove('h-60')
-    }
-  }, [showLinks])
 
+  const heightStyle = showLinks
+    ? `${navLinksRef.current.getBoundingClientRect().height}px`
+    : '0px'
+
+  console.log(heightStyle)
   return (
-    <nav
-      ref={navHeight}
-      className=' h-20 md:h-20 lg:h-20  block  shadow-lg fixed min-w-full bg-blue-300 md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '
-    >
+    <nav className='h-20 block shadow-lg fixed min-w-full bg-blue-300 md:h-20 lg:h-20  md:flex md:flex-col md:items-start justify-between  lg:grid lg:grid-cols-3 lg:items-center '>
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
-        <h2 className='text-2xl md:text-3xl  lg:text-4xl  tracking-wider pb-2 font-semibold '>
-          <span className='font-semibold lowercase'>ajay</span>
-          <span className='text-blue-600 '>_prgmr</span>
-        </h2>
+        <img
+          src={ajay_prgmr}
+          alt='ajay_prgmr'
+          className='pb-5 ml-[-12px] md:mt-[-30px] lg:pt-[24px]  '
+        />
         {/* Hamburger menu */}
         <button className='lg:hidden md:hidden' onClick={toggleLinks}>
           {showLinks ? (
@@ -39,12 +37,13 @@ const Navbar = () => {
       </div>
 
       {/* Navigation links */}
-      <div className=''>
+      <div className={`h-${heightStyle}`} ref={navLinksContainer}>
         <ul
+          ref={navLinksRef}
           className={`${
             showLinks
-              ? 'lg:flex  md:flex md:pl-20'
-              : 'invisible md:visible  md:flex md:justify-end md:items-center  lg:visible lg:flex lg:justify-center lg:items-center'
+              ? 'lg:flex  md:flex md:pl-20 '
+              : 'invisible md:visible  md:flex md:mt-[-30px] md:pl-2 lg:visible lg:flex lg:justify-center lg:items-center'
           } `}
         >
           {links.map((link) => {
@@ -53,7 +52,7 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={href}
-                  className='capitalize text-black block hover:pl-7 pl-5 hover:font-semibold hover:bg-blue-600 text-xl md:text-xl  lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 '
+                  className='bg-blue-300 capitalize text-black block  pl-5 hover:bg-blue-600 text-l md:text-xl md:hover:text-blue-600 md:hover:bg-transparent lg:text-2xl lg:hover:bg-transparent lg:hover:text-blue-600 lg:mt-5 '
                 >
                   {text}
                 </a>

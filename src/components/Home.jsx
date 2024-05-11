@@ -11,7 +11,7 @@ const Home = () => {
     link.href =
       'https://drive.google.com/file/d/1Tg4zDuHai4YboRVorJ5_hP3oSka_rjI2/view?usp=sharing'
     // Set the download attribute to specify the filename
-    link.download = 'filename.pdf'
+    link.download = 'Ajay-Kushwaha-Resume.pdf'
     // Trigger the click event on the link element
     link.click()
   }
@@ -21,17 +21,17 @@ const Home = () => {
       id='home'
     >
       {/* Hero Image */}
-      <div className='md:mt-20 md:h-tab-img lg:min-h-screen lg:-mt-1'>
+      <div className='md:mt-20 md:h-tab-img lg:mt-[30px]  '>
         <img
           src={hero}
           alt='hero'
-          className='mt-20 md:-mt-10 h-mobile-img w-screen lg:h-full '
+          className='mt-20 md:-mt-10 h-mobile-img w-screen lg:h-[100vh] lg:object-contain'
         />
       </div>
 
       {/* Content */}
-      <div className='flex flex-col justify-between items-center md:flex md:flex-col md:justify-between md:min-h-full lg:max-h-screen lg:flex lg:flex-col lg:justify-between lg:mt-96'>
-        <div className='flex flex-col items-center space-y-6 md:-mt-40 lg:flex lg:justify-start lg:items-center'>
+      <div className='flex flex-col justify-between items-center  md:flex md:flex-col md:justify-between md:min-h-full lg:max-h-screen lg:flex lg:flex-col lg:justify-between lg:mt-96'>
+        <div className='flex flex-col items-center space-y-6         md:-mt-40 lg:flex lg:justify-start lg:items-center'>
           <h1 className='text-5xl md:text-5xl font-extrabold tracking-wider lg:text-8xl lg:font-semibold'>
             I'm Ajay
           </h1>
