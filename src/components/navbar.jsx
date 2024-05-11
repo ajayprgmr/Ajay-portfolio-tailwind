@@ -29,9 +29,9 @@ const Navbar = () => {
         {/* Hamburger menu */}
         <button className='lg:hidden md:hidden' onClick={toggleLinks}>
           {showLinks ? (
-            <FaWindowClose className='text-2xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent mr-10 ' />
+            <FaWindowClose className='text-2xl hover:rotate-90 ease-in-out duration-300 text-black bg-transparent mr-5 ' />
           ) : (
-            <FaBars className='text-2xl text-black  bg-transparent mr-10' />
+            <FaBars className='text-2xl text-black  bg-transparent mr-5' />
           )}
         </button>
       </div>
