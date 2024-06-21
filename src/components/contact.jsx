@@ -1,4 +1,5 @@
 import SectionTitle from './SectionTitle'
+import contactMe from '../assets/contact-us.jpg'
 
 import { useState } from 'react'
 import axios from 'axios' // For making HTTP requests
@@ -39,7 +40,12 @@ const ContactForm = () => {
   return (
     <div className='pt-20 align-element' id='contact'>
       <SectionTitle text='Contact Me' />
-      <div className='mt-10  bg-white shadow-md rounded px-8 py-6'>
+      <div className='mt-10  bg-white shadow-md rounded px-8 py-6 lg:grid grid-cols-2 lg:gap-10'>
+        <div className='object-contain  max-lg:hidden '>
+          <img src={contactMe} alt='Contact Me image' />
+          <img src={contactMe} alt='Contact Me image' />
+          <img className='w-full h-20' src={contactMe} alt='Contact Me image' />
+        </div>
         <form onSubmit={handleSubmit}>
           <div className='mb-4 '>
             <label
@@ -49,7 +55,7 @@ const ContactForm = () => {
               Name
             </label>
             <input
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline'
               id='name'
               type='text'
               placeholder='Your Name'
@@ -67,7 +73,7 @@ const ContactForm = () => {
               Email
             </label>
             <input
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline'
               id='email'
               type='email'
               placeholder='Your Email'
@@ -85,7 +91,7 @@ const ContactForm = () => {
               Message
             </label>
             <textarea
-              className='shadow appearance-none border rounded w-full py-2 px-3 h-40 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='shadow appearance-none border rounded w-full py-2 px-3 h-40 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline'
               id='message'
               placeholder='Your Message....'
               name='message'

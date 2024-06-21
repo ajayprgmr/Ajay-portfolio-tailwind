@@ -21,7 +21,7 @@ module.exports = {
             transform: 'translateY(15px)',
           },
           '50%': {
-            transform: 'translateY(-40px)', // Adjust the distance for the bounce effect
+            transform: 'translateY(-15px)', // Adjust the distance for the bounce effect
           },
         },
       },

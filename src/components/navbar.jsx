@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
-import ajay_prgmr from '../assets/ajay_prgmr.svg'
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
   const navLinksRef = useRef(null)
@@ -19,13 +18,11 @@ const Navbar = () => {
 
   console.log(heightStyle)
   return (
-    <nav className='h-20  shadow-lg fixed min-w-[100vw] bg-blue-300   md:flex md:flex-col md:items-start justify-between lg:gap-10  lg:grid lg:grid-cols-3 lg:items-center '>
+    <nav className='h-20 shadow-lg  min-w-[100vw] fixed top-0 bg-blue-300   md:flex md:flex-col md:items-start justify-between lg:gap-10  lg:grid lg:grid-cols-3 lg:items-center '>
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
-        <img
-          src={ajay_prgmr}
-          alt='ajay_prgmr'
-          className='pb-5 ml-[-12px] w-40  md:mt-[-30px] md:w-48 lg:pt-[20px] lg:w-56   '
-        />
+        <h5 className='text-2xl font-bold lowercase md:text-3xl'>
+          ajay_<span className='text-blue-800 '>prgmr</span>
+        </h5>
         {/* Hamburger menu */}
         <button className='lg:hidden md:hidden' onClick={toggleLinks}>
           {showLinks ? (
@@ -43,7 +40,7 @@ const Navbar = () => {
           className={`${
             showLinks
               ? ' md:flex  lg:flex lg:justify-center lg:items-center'
-              : 'invisible md:visible  md:flex md:mt-[-30px] md:pl-2  lg:visible lg:mt-[-1px]  lg:flex lg:justify-center lg:items-center'
+              : 'invisible md:visible  md:flex md:pt-2  lg:visible lg:mt-[-1px]  lg:flex lg:justify-center lg:items-center'
           } `}
         >
           {links.map((link) => {
@@ -53,7 +50,7 @@ const Navbar = () => {
                 <a
                   href={href}
                   onClick={showLinks ? toggleLinks : undefined} // Conditionally add onClick event
-                  className={`bg-blue-300 capitalize text-black block pl-5 hover:bg-blue-600 text-l md:text-xl md:hover:text-blue-600 md:hover:bg-transparent lg:hover:text-blue-600`}
+                  className={`bg-blue-300 text-[1.1rem] capitalize text-black block pl-5 hover:bg-blue-600 hover:font-bold md:text-s md:hover:text-blue-600 md:hover:bg-transparent lg:hover:text-blue-600 lg:text-xl`}
                 >
                   {text}
                 </a>
@@ -71,7 +68,7 @@ const Navbar = () => {
             <a
               key={id}
               href={url}
-              className={` text-blue-400 text-4xl ${
+              className={` text-blue-400 text-2xl ${
                 id === 1
                   ? 'hover:text-blue-600'
                   : id === 2
