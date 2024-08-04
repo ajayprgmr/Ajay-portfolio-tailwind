@@ -1,6 +1,7 @@
 import useFetchProjects from './fetchProjects'
 import SectionTitle from './SectionTitle'
 import './projects.css'
+
 const Project = () => {
   const { loading, projects } = useFetchProjects()
 
@@ -13,12 +14,12 @@ const Project = () => {
   }
 
   return (
-    <section className='py-20 align-element ' id='projects'>
+    <section className='py-20 align-element' id='projects'>
       <SectionTitle text='Web Creations' />
       <div>
         <div className='projects-center'>
           {projects.map((project) => {
-            const { id, title, url, img } = project
+            const { id, title, url, img, gitHub } = project
             return (
               <a
                 key={id}
@@ -28,6 +29,10 @@ const Project = () => {
                 className='project'
               >
                 <img src={img} alt={title} className='img' />
+                <div className='project-info'>
+                  <a href={url}>Go Live</a>
+                  <a href={gitHub}>GitHub</a>
+                </div>
                 <h5>{title}</h5>
               </a>
             )

@@ -1,7 +1,9 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { links, socials } from '../data'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
+import './navbar.css'
 const Navbar = () => {
+  const [isHidden, setIsHidden] = useState(false)
   const [showLinks, setShowLinks] = useState(false)
   const navLinksRef = useRef(null)
   const navLinksContainer = useRef(null)
@@ -16,9 +18,27 @@ const Navbar = () => {
     ? `${navLinksRef.current.getBoundingClientRect().height}px`
     : '0px'
 
-  console.log(heightStyle)
+  // console.log(heightStyle)
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      console.log(scrollPosition)
+      if (scrollPosition >= 70) {
+        setIsHidden(true)
+      } else {
+        setIsHidden(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className='h-20 shadow-lg  min-w-[100vw] fixed top-0 bg-blue-300   md:flex md:flex-col md:items-start justify-between lg:gap-10  lg:grid lg:grid-cols-3 lg:items-center '>
+    <nav
+      className={`h-20 shadow-lg  min-w-[100vw] fixed top-0 bg-blue-300   md:flex md:flex-col md:items-start justify-between lg:gap-10  lg:grid lg:grid-cols-3 lg:items-center ${
+        isHidden ? 'opacity-0' : ''
+      }`}
+    >
       <div className='h-20 lg:h-20 flex justify-between items-center px-5 md:flex md:flex-col md:justify-start md:pt-1  lg:flex lg:justify-center lg:items-center'>
         <h5 className='text-2xl font-bold lowercase md:text-3xl'>
           ajay_<span className='text-blue-800 '>prgmr</span>

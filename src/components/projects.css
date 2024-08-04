@@ -370,3 +370,44 @@ PROJECTS
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.project-info {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem; /* Adds spacing between rows */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background-color: rgba(35, 17, 198, 0.7);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity, visibility, and transform */
+}
+
+.project a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem; /* Adds padding inside links */
+  background-color: rgba(
+    114,
+    228,
+    20,
+    0.5
+  ); /* Background color for better readability */
+  border-radius: 4px; /* Rounded corners for links */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.project a:hover {
+  background-color: rgba(215, 22, 22, 0.8); /* Darken on hover */
+}
+
+.project:hover .project-info {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) rotate(-10deg); /* Reset rotation on hover */
+}

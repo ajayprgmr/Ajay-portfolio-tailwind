@@ -35,7 +35,7 @@ export const socials = [
   },
   {
     id: 4,
-    url: 'https://www.instagram.com/ajay_prgmr/',
+    url: 'https://www.instagram.com/ajay_kush.waha/',
     icon: <FaInstagramSquare />,
   },
   {

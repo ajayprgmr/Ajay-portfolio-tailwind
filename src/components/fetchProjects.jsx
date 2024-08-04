@@ -15,10 +15,11 @@ const useFetchProjects = () => {
     try {
       const response = await client.getEntries({ content_type: 'project' })
       const projects = response.items.map((item) => {
-        const { title, url, image } = item.fields
+        const { title, url, image, gitHub } = item.fields
+        console.log(gitHub)
         const id = item.sys.id
         const img = image?.fields?.file?.url
-        return { id, title, url, img }
+        return { id, title, url, img, gitHub }
       })
       setProjects(projects)
       setLoading(false)
