@@ -32,7 +32,7 @@ const Home = () => {
       </div>
 
       {/* Content */}
-      <div className='flex flex-col gap-20  md:flex md:flex-col md:justify-between md:min-h-full md:mt-[-230px] lg:max-h-screen lg:flex lg:flex-col lg:justify-between lg:mt-[-600px]'>
+      <div className='flex flex-col gap-20  md:flex md:flex-col md:justify-between md:min-h-[100vh] md:mt-[-150px] lg:max-h-screen lg:flex lg:flex-col lg:justify-between lg:mt-[-500px]'>
         <div className='flex flex-col items-start space-y-6  md:-mt-40 lg:flex lg:justify-start  '>
           <div className='pl-5 mt-10 md:z-[10]  '>
             <h1 className='text-5xl pb-4 font-bold flex justify-start md:text-6xl lg:pl-20'>

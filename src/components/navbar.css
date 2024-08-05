@@ -1,4 +1,4 @@
-.navbar-hidden {
+navbar-hidden {
   transform: translateY(-100%); /* Moves the navbar out of view */
   transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
 }
